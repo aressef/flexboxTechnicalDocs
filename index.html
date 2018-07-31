@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Technical Documentation Page</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script type="text/javascript" src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+</head>
+
+<body>
+  <nav id="navbar">
+    <header id="navbar__header">Flexbox Docs</header>
+    <ul id=navbar__ul>
+      <li class="navbar__li">
+        <a class="nav-link navbar__a" href="#What_is_Flexbox">What is Flexbox</a>
+      </li>
+      <li class="navbar__li">
+        <a class="navbar__a" href="#Parent_Properties">Parent Properties</a>
+      </li>
+      <li class="navbar__li navbar__li-prop">
+        <a class="nav-link navbar__a" href="#display">display</a>
+      </li>
+      <li class="navbar__li navbar__li-prop">
+        <a class="nav-link navbar__a" href="#flex-direction">flex-direction</a>
+      </li>
+      <li class="navbar__li navbar__li-prop">
+        <a class="nav-link navbar__a" href="#flex-wrap">flex-wrap</a>
+      </li>
+      <li class="navbar__li navbar__li-prop">
+        <a class="nav-link navbar__a" href="#flex-flow">flex-flow</a>
+      </li>
+      <li class="navbar__li navbar__li-prop">
+        <a class="nav-link navbar__a" href="#justify-content">justify-content</a>
+      </li>
+      <li class="navbar__li navbar__li-prop">
+        <a class="nav-link navbar__a" href="#align-items">align-items</a>
+      </li>
+      <li class="navbar__li navbar__li-prop">
+        <a class="nav-link navbar__a" href="#align-content">align-content</a>
+      </li>
+      <li class="navbar__li">
+        <a class="navbar__a" href="#Child_Properties">child properties</a>
+      </li>
+      <li class="navbar__li navbar__li-prop">
+        <a class="nav-link navbar__a" href="#order">order</a>
+      </li>
+      <li class="navbar__li navbar__li-prop">
+        <a class="nav-link navbar__a" href="#flex-grow">flex-grow</a>
+      </li>
+      <li class="navbar__li navbar__li-prop">
+        <a class="nav-link navbar__a" href="#flex-shrink">flex-shrink</a>
+      </li>
+      <li class="navbar__li navbar__li-prop">
+        <a class="nav-link navbar__a" href="#flex-basis">flex-basis</a>
+      </li>
+      <li class="navbar__li navbar__li-prop">
+        <a class="nav-link navbar__a" href="#flex">flex</a>
+      </li>
+      <li class="navbar__li navbar__li-prop">
+        <a class="nav-link navbar__a" href="#align-self">align-self</a>
+      </li>
+      <li class="navbar__li">
+        <a class="nav-link navbar__a" href="#Reference">Reference</a>
+      </li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="What_is_Flexbox">
+      <header class="section__header--main">What is Flexbox</header>
+      <article class="section__article">
+        <p class="section__p">The Flexbox Layout (Flexible Box) module (currently a W3C Last Call Working Draft) aims at providing a more efficient
+          way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic
+          (thus the word "flex").</p>
+
+        <p class="section__p">The main idea behind the flex layout is to give the container the ability to alter its items' width/height (and order)
+          to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes). A flex
+          container expands items to fill available free space, or shrinks them to prevent overflow.</p>
+
+        <p class="section__p">Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based
+          and inline which is horizontally-based). While those work well for pages, they lack flexibility (no pun intended)
+          to support large or complex applications (especially when it comes to orientation changing, resizing, stretching,
+          shrinking, etc.).</p>
+      </article>
+    </section>
+    <div id="Parent_Properties">
+      <header class="div__header section__header--main">Parent Properties</header>
+      <p>These properties are set on the flex container.</p>
+      <div class="properties">
+        <section class="main-section" id="display">
+          <header class="section__header">display</header>
+          <article class="section__article">
+            <p class="section__p">The display must be set to flex (or inline-flex) in order to enable flexbox. This defines the flex container;
+              inline or block depending on the given value.</p>
+            <div class="section__code-box">
+              <!-- No Indents for correct pre tag rendering -->
+              <pre class="section__code-formatter">
+<code class="section__code"><span class="section__code-class">.container</span> <span class="section__code-punctuation">{</span>
+  <span class="section__code-property">display</span><span class="section__code-punctuation">:</span> flex<span class="section__code-punctuation">;</span>
+<span class="section__code-punctuation"><span class="section__code-punctuation">}</span></span>
+</code>
+              </pre>
+            </div>
+            <div class="section__div-ul">
+              <p class="section__ul-title">Value Options: </p>
+              <ul class="section__ul">
+                <li class="section__li">- flex</li>
+                <li class="section__li">- inline-flex</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+        <section class="main-section" id="flex-direction">
+          <header class="section__header">flex-direction</header>
+          <article class="section__article">
+            <p class="section__p">This establishes the direction of the flex items by setting the main-axis. Each flex container can only be set
+              to one direction, horizontal or vertical.</p>
+            <div class="section__code-box">
+              <!-- No Indents for correct pre tag rendering -->
+              <pre class="section__code-formatter">
+<code class="section__code"><span class="section__code-class">.container</span> <span class="section__code-punctuation">{</span>
+  <span class="section__code-property">flex-direction</span><span class="section__code-punctuation">:</span> row<span class="section__code-punctuation">;</span>
+<span class="section__code-punctuation">}</span>
+</code>
+              </pre>
+            </div>
+            <div class="section__div-ul">
+              <p class="section__ul-title">Value Options: </p>
+              <ul class="section__ul">
+                <li class="section__li">- Crow</li>
+                <li class="section__li">- row-reverse</li>
+                <li class="section__li">- column</li>
+                <li class="section__li">- column-reverse</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+        <section class="main-section" id="flex-wrap">
+          <header class="section__header">flex-wrap</header>
+          <article class="section__article">
+            <p class="section__p">By default, flex items will all try to fit into one line. You can Change that and allow the tiems to wrap as
+              needed with this property.</p>
+            <div class="section__code-box">
+
+              <!-- No Indents for correct pre tag rendering -->
+              <pre class="section__code-formatter">
+<code class="section__code"><span class="section__code-class">.container</span> <span class="section__code-punctuation">{</span>
+  <span class="section__code-property">flex-wrap</span><span class="section__code-punctuation">:</span> nowrap<span class="section__code-punctuation">;</span>
+<span class="section__code-punctuation">}</span>
+</code>
+              </pre>
+
+            </div>
+            <div class="section__div-ul">
+              <p class="section__ul-title">Value Options: </p>
+              <ul class="section__ul">
+                <li class="section__li">- nowrap</li>
+                <li class="section__li">- wrap</li>
+                <li class="section__li">- wrap-reverse</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+        <section class="main-section" id="flex-flow">
+          <header class="section__header">flex-flow</header>
+          <article class="section__article">
+            <p class="section__p">This is shorthand for the
+              <code class="section__p-code">flex-direction</code> and
+              <code class="section__p-code">flex-wrap</code> properties, which together define the flex container's main and cross axes. Default is row
+              nowrap.
+            </p>
+            <div class="section__code-box">
+              <!-- No Indents for correct pre tag rendering -->
+              <pre class="section__code-formatter">
+<code class="section__code"><span class="section__code-class">.container</span> <span class="section__code-punctuation">{</span>
+  <span class="section__code-property">flex-flow</span><span class="section__code-punctuation">:</span> < 'flex-direction'> || < 'flex-wrap'><span class="section__code-punctuation">;</span>
+<span class="section__code-punctuation">}</span>
+</code>
+              </pre>
+            </div>
+          </article>
+        </section>
+        <section class="main-section" id="justify-content">
+          <header class="section__header">justify-content</header>
+          <article class="section__article">
+            <p class="section__p">This defines the alignment along the main axis. It helps distribute extra free space left over when either all
+              the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts
+              some control over the alignment of items when they overflow the line.</p>
+            <div class="section__code-box">
+              <!-- No Indents for correct pre tag rendering -->
+              <pre class="section__code-formatter">
+<code class="section__code"><span class="section__code-class">.container</span> <span class="section__code-punctuation">{</span>
+  <span class="section__code-property">justify-content</span><span class="section__code-punctuation">:</span> flex-start<span class="section__code-punctuation">;</span>
+<span class="section__code-punctuation">}</span>
+</code>
+              </pre>
+            </div>
+            <div class="section__div-ul">
+              <p class="section__ul-title">Value Options: </p>
+              <ul class="section__ul">
+                <li class="section__li">- flex-start</li>
+                <li class="section__li">- flex-end</li>
+                <li class="section__li">- center</li>
+                <li class="section__li">- space-between</li>
+                <li class="section__li">- space-around</li>
+                <li class="section__li">- space-evenly</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+        <section class="main-section" id="align-items">
+          <header class="section__header">align-items</header>
+          <article class="section__article">
+            <p class="section__p">This defines the default behaviour for how flex items are laid out along the cross axis on the current line.
+              Think of it as the
+              <code class="section__p-code">justify-content</code> version for the cross-axis.</p>
+            <div class="section__code-box">
+
+              <!-- No Indents for correct pre tag rendering -->
+              <pre class="section__code-formatter">
+<code class="section__code"><span class="section__code-class">.container</span></span> <span class="section__code-punctuation">{</span>
+  <span class="section__code-property">align-items</span><span class="section__code-punctuation">:</span> flex-start<span class="section__code-punctuation">;</span>
+<span class="section__code-punctuation">}</span>
+</code>
+              </pre>
+
+            </div>
+            <div class="section__div-ul">
+              <p class="section__ul-title">Value Options: </p>
+              <ul class="section__ul">
+                <li class="section__li">- flex-start</li>
+                <li class="section__li">- flex-end</li>
+                <li class="section__li">- center</li>
+                <li class="section__li">- baseline</li>
+                <li class="section__li">- stretch</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+        <section class="main-section" id="align-content">
+          <header class="section__header">align-content</header>
+          <article class="section__article">
+            <p class="section__p">This aligns a flex container's lines within when there is extra space in the cross-axis, similar to how
+              <code class="section__p-code">justify-content</code> aligns individual items within the main-axis.
+              <strong>Note:</strong> this property has no effect when there is only one line of flex items.
+            </p>
+            <div class="section__code-box">
+              <!-- No Indents for correct pre tag rendering -->
+              <pre class="section__code-formatter">
+<code class="section__code"><span class="section__code-class">.container</span> <span class="section__code-punctuation">{</span>
+  <span class="section__code-property">align-content</span><span class="section__code-punctuation">:</span> flex-start<span class="section__code-punctuation">;</span>
+<span class="section__code-punctuation">}</span>
+</code>
+              </pre>
+            </div>
+            <div class="section__div-ul">
+              <p class="section__ul-title">Value Options: </p>
+              <ul class="section__ul">
+                <li class="section__li">- flex-start</li>
+                <li class="section__li">- flex-end</li>
+                <li class="section__li">- center</li>
+                <li class="section__li">- space-between</li>
+                <li class="section__li">- space-around</li>
+                <li class="section__li">- stretch</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+
+    <div id="Child_Properties">
+      <header class="div__header section__header--main">Child Properties</header>
+      <p>These properties are set on the flex items.</p>
+      <div class="properties">
+        <section class="main-section" id="order">
+          <header class="section__header">order</header>
+          <article class="section__article">
+            <p class="section__p">By default, flex items are laid out in the source order. However, the
+              <code class="section__p-code">order</code> property controls the order in which they appear in the flex container.</p>
+            <div class="section__code-box">
+              <!-- No Indents for correct pre tag rendering -->
+              <pre class="section__code-formatter">
+<code class="section__code"><span class="section__code-class">.item</span> <span class="section__code-punctuation">{</span>
+  <span class="section__code-property">order</span><span class="section__code-punctuation">:</span> &lt;number&gt;<span class="section__code-punctuation">;</span> <span class="section__code-comment">//integer</span>
+<span class="section__code-punctuation">}</span>
+</code>
+              </pre>
+            </div>
+          </article>
+        </section>
+        <section class="main-section" id="flex-grow">
+          <header class="section__header">flex-grow</header>
+          <article class="section__article">
+            <p class="section__p">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion.
+              It dictates what amount of the available space inside the flex container the item should take up.</p>
+            <p class="section__p">If all items have
+              <code class="section__p-code">flex-grow</code> set to 1, the remaining space in the container will be distributed equally to all children.
+              If one of the children has a value of 2, the remaining space would take up twice as much space as the others
+              (or it will try to, at least).</p>
+            <p class="section__p">Negative numbers are invalid</p>
+            <div class="section__code-box">
+              <!-- No Indents for correct pre tag rendering -->
+              <pre class="section__code-formatter">
+<code class="section__code"><span class="section__code-class">.item</span> <span class="section__code-punctuation">{</span>
+  <span class="section__code-property">flex-grow</span><span class="section__code-punctuation">:</span> &lt;number&gt;<span class="section__code-punctuation">;</span> <span class="section__code-comment">//default 0</span>
+<span class="section__code-punctuation">}</span>
+</code>
+              </pre>
+            </div>
+          </article>
+        </section>
+        <section class="main-section" id="flex-shrink">
+          <header class="section__header">flex-shrink</header>
+          <article class="section__article">
+            <p class="section__p">This defines the ability for a flex item to shrink if necessary.</p>
+            <p class="section__p">Negative numbers are invalid</p>
+            <div class="section__code-box">
+              <!-- No Indents for correct pre tag rendering -->
+              <pre class="section__code-formatter">
+<code class="section__code"><span class="section__code-class">.item</span> <span class="section__code-punctuation">{</span>
+  <span class="section__code-property">flex-shrink</span><span class="section__code-punctuation">:</span> &lt;number&gt;<span class="section__code-punctuation">;</span> <span class="section__code-comment">// default 1</span>
+<span class="section__code-punctuation">}</span>
+</code>
+              </pre>
+            </div>
+          </article>
+        </section>
+        <section class="main-section" id="flex-basis">
+          <header class="section__header">flex-basis</header>
+          <article class="section__article">
+            <p class="section__p">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g.
+              20%, 5rem, etc.) or a keyword. The
+              <code class="section__p-code">auto</code> keyword means "look at my width or height property" (which was temporarily done by the
+              <code class="section__p-code">main-size</code> keyword until depricated). The
+              <code class="section__p-code">content</code> keyword means "size is based on the items content" - this keyword isn't well supported yet,
+              so it's hard to test and harder to know what its brethren
+              <code class="section__p-code">max-content</code>,
+              <code class="section__p-code">min-content</code>, and
+              <code class="section__p-code">fit-content</code> do.</p>
+            <p class="section__p">If set to
+              <code class="section__p-code">0</code>, the extra space around content isn't factored in. If set to
+              <code class="section__p-code">auto</code>, the extra space is distributed based on its
+              <code class="section__p-code">flex-grow</code> value.</p>
+            <div class="section__code-box">
+              <!-- No Indents for correct pre tag rendering -->
+              <pre class="section__code-formatter">
+<code class="section__code"><span class="section__code-class">.item</span> <span class="section__code-punctuation">{</span>
+  <span class="section__code-property">flex-basis</span><span class="section__code-punctuation">:</span> &lt;length&gt; | auto<span class="section__code-punctuation">;</span> <span class="section__code-comment">// default auto</span>
+<span class="section__code-punctuation">}</span>
+</code>
+              </pre>
+            </div>
+          </article>
+        </section>
+        <section class="main-section" id="flex">
+          <header class="section__header">flex</header>
+          <article class="section__article">
+            <p class="section__p">This is the shorthand for
+              <code class="section__p-code">flex-grow</code>,
+              <code class="section__p-code">flex-shrink</code>, and
+              <code class="section__p-code">flex-basis</code> combined. The second and third parameters are optional. Default is
+              <code class="section__p-code">0 1 auto</code>.</p>
+            <p class="section__p">It is recommended that you use this shorthand property rather than set the individual properties. The short hand
+              sets the other values intelligently.</p>
+            <div class="section__code-box">
+              <!-- No Indents for correct pre tag rendering -->
+              <pre class="section__code-formatter">
+<code class="section__code"><span class="section__code-class">.item</span> <span class="section__code-punctuation">{</span>
+  <span class="section__code-property">flex</span><span class="section__code-punctuation">:</span> none | [&lt;'flex-grow'&gt; &lt;'flex-shrink'&gt; || &lt;'flex-basis'&gt;]<span class="section__code-punctuation">;</span>
+<span class="section__code-punctuation">}</span>
+</code>
+
+              </pre>
+            </div>
+          </article>
+        </section>
+        <section class="main-section" id="align-self">
+          <header class="section__header">align-self</header>
+          <article class="section__article">
+            <p class="section__p">This allows the default alignment (or the one specified by
+              <code class="section__p-code">align-items</code>) to be overridden for individual flex-items.</p>
+            <p class="section__p">Note that
+              <code class="section__p-code">float</code>,
+              <code class="section__p-code">clear</code>, and
+              <code class="section__p-code">vertical-align</code> have no effect on a flex-item.</p>
+            <div class="section__code-box">
+              <!-- No Indents for correct pre tag rendering -->
+              <pre class="section__code-formatter">
+<code class="section__code"><span class="section__code-class">.item</span> <span class="section__code-punctuation">{</span>
+  <span class="section__code-property">align-self</span><span class="section__code-punctuation">:</span> flex-end<span class="section__code-punctuation">;</span>
+<span class="section__code-punctuation">}</span>
+</code>
+              </pre>
+            </div>
+            <div class="section__div-ul">
+              <p class="section__ul-title">Value Options: </p>
+              <ul class="section__ul">
+                <li class="section__li">- auto</li>
+                <li class="section__li">- flex-start</li>
+                <li class="section__li">- flex-end</li>
+                <li class="section__li">- center</li>
+                <li class="section__li">- baseline</li>
+                <li class="section__li">- stretch</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+      </div>
+      <section class="main-section" id="Reference">
+        <header class="section__header">Reference</header>
+        <article class="section__article">
+          <p class="section__p">All documentation in this page was taken from Chris Coyier's
+            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a>.</p>
+        </article>
+      </section>
+    </div>
+  </main>
+
+</body>
+
+</html>

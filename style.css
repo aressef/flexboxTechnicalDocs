@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  width: 100%;
+}
+
+#navbar {
+  width: 300px;
+  border-right: 2px solid black;
+  background-color: #f2f2f2;
+  position: fixed;
+  height: 100%;
+}
+
+#navbar__header {
+  font-size: 34px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-top: 30px;
+  height: 75px;
+}
+
+#navbar__ul {
+  list-style: none;
+}
+
+.navbar__li {
+  width: 100%;
+  font-size: 16px;
+  height: 40px;
+  border-top: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__li:hover {
+  font-weight: bold;
+}
+
+.navbar__a {
+  color: #333;
+  text-decoration: none;
+  padding-left: 40px;
+}
+
+#main-doc {
+  width: auto;
+  margin: 0 15px 0 300px;
+  padding: 25px;
+}
+
+.main-section {
+  margin: 20px 0 40px 0;
+}
+
+.properties {
+  margin-left: 15px;
+}
+
+.section__header--main {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.section__header {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.section__article {
+  margin-left: 15px;
+}
+
+.section__p {
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.section__p-code {
+  background-color: #f2f2f2;
+  font-size: 16px;
+}
+
+.section__code-box {
+  background-color: black;
+  height: 100px;
+  width: 500px;
+  margin: 15px 0 15px 20px;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  overflow: auto;
+}
+
+.section__code-formatter {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.section__code {
+  color: #c5d86d;
+}
+
+.section__code-class {
+  color: #f7df66;
+}
+
+.section__code-property {
+  color: #16bac5;
+}
+
+.section__code-punctuation {
+  color: white;
+}
+
+.section__code-comment {
+  color: gray;
+}
+
+.section__ul {
+  list-style: none;
+}
+
+.section__li {
+  margin-left: 10px;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 940px) {
+  body {
+    flex-direction: column;
+  }
+  #navbar {
+    width: 100%;
+    height: 310px;
+    border-right: none;
+    position: relative;
+  }
+  #navbar__header {
+    text-align: center;
+  }
+  #navbar__ul {
+    height: 200px;
+    overflow: auto;
+    border: 2px solid black;
+  }
+  #main-doc {
+    width: auto;
+    margin: 0 15px;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .properties,
+  .section__article {
+    margin-left: 0;
+  }
+  .section__code-box {
+    width: auto;
+    margin: 15px 0;
+  }
+}
